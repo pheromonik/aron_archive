@@ -1,0 +1,434 @@
+
+
+/* set all to 0 */
+* {
+margin: 0;
+padding: 0;
+border: 0 none;
+text-decoration: none;
+}
+
+
+
+/* ===== Haupt-Container ===== */
+
+
+body#corpus {
+background-image: url(../images/noiryork.png);
+background-position:center top;
+background-repeat:no-repeat;
+font-family: Verdana, Helvetica, Arial, sans-serif;
+font-size: 100.01%;
+text-align: center;
+padding: 10px 0 20px 0;
+background-color: #000000;
+color: #fff;
+
+}
+
+
+/* Alles umschlieszender Container */
+
+#wrapper3 {
+width: 900px;
+height: 800px;
+margin-top: 100px;
+padding: 10px;
+text-align: center;
+color: #fff;
+
+overflow:scroll;}
+
+.transparent {
+
+  color: white;
+  opacity: 0.9;
+}
+
+
+#wrapper {
+width: 90%;
+height: 100%;
+margin-top: 300px;
+padding: 10px;
+text-align: left;
+color: #fff;
+overflow:visible;
+}
+.transparent {
+
+  color: white;
+  opacity: 0.9;
+}
+
+
+/* Alles umschlieszender Container */
+
+#wrapper2 {
+width: 80%;
+height: 100%;
+margin-top: 200px;
+padding: 10px;
+text-align: left;
+color: #fff;
+overflow:visible;
+
+}
+
+.transparent {
+
+  color: white;
+  opacity: 0.9;
+}
+
+
+
+
+/* Header */
+#header { 
+/* umschlieszt oder enthaelt Logo */
+
+background-image: url(../images/head.jpg);
+background-repeat: no-repeat;
+height: 150px;
+}
+/
+* Aktiviere das Element, das Du nutzen willst (Text- oder Bild-Logo) */
+
+#header #logo h1 {
+display: none;
+}
+
+/* Breadcrumb */
+
+#breadcrumb {
+text-align: right;
+margin-top: 10px;
+margin-right: 40px;
+}
+
+
+
+/* Content */
+#content {
+position:relative;
+left: 20%;
+right: 25%;
+width: 100%;
+margin-top: 10px;
+text-align: left;
+
+}
+
+
+
+/* Footer */
+#footer {
+text-align: center;
+font-size: 10px;marign-bottom: 25px;
+}
+
+
+
+/* ===== Menues ===== */
+
+#menuebox {
+background-color: cornflowerblue;
+color: #fff;
+}
+#menpre1,
+#menaft1 {
+height: 1px;
+background-color: #fff;
+color: #fff;
+}
+
+#menpre2,
+#menpre3 { 
+/* optional, zB. fuer Grafik */
+
+background-image: url(../images/fader.jpg);
+background-repeat: repeat-y;
+width: 150px;
+height: 15px;
+margin-bottom: 5px;
+}
+#menaft3 { /* optional, zB. fuer Grafik */
+background-image: url(../images/fader.jpg);
+background-repeat: repeat-y;
+width: 150px;
+height: 15px;
+margin-top: 10px;
+}
+
+
+
+/* === Gestaltung Menue-Listen === */
+
+ul {
+list-style-type: none;
+}
+
+#menue1 {
+text-align: center;
+}
+#menue1 ul#menu1 {
+padding: 2px 0px 2px 0px;
+}
+#menue1 ul#menu1 li {
+display: inline;
+}
+#menue1 ul#menu1 li#menuhead1 {
+display: none;
+}
+
+#menue2 {
+float: left;
+width: 150px;
+margin:10px 20px 10px 0px;
+}
+#menue2 ul#menu2 li,
+#menue2 ul#menu2a li,
+#menue3 ul#menu3 li {
+padding: 2px 0px 0px 5px;
+}
+#menue2 ul#menu2 li#menuhead2,
+#menue3 ul#menu3 li#menuhead3 {
+font-weight: bold;
+padding-bottom: 3px;
+font-variant: small-caps;
+background-color: transparent;
+color: #333;
+}
+
+
+/*	Spezielle Formatierung fuer 
+	'Alle Designs' und 'Freestyle' in menue2(a) */
+#menue2 ul#menu2a {
+margin: 10px 0px 0px 0px;
+font-style: italic;
+width: 200px;
+}
+
+#menue3 {
+float: left;
+width: 150px;
+margin:10px 20px 10px 0px;
+}
+
+#chat {
+position:absolute;
+float: right;
+width: 300px;
+hight: 90%;
+clear: right;
+top:400px;
+right:5px;
+overflow:scroll;
+background-color: #000033;
+
+}
+
+
+/*	=== LINKS === 
+	Bitte Status-Formate selber einfuegen: 
+	a:link, a:visited, a:hover, a:active; a:focus */
+	
+/*	Links allgemein */
+a {
+background-color: transparent;
+color: #ecc188;
+}
+a:hover {
+background-color: transparent;
+color: #fff;
+}
+
+#breadcrumb a:hover {
+border-bottom: 1px solid #a76b1b;
+}
+
+
+/* Links in Menues */
+#menue1 a {
+font-weight: bold;
+padding: 0px 5px;
+background-color: transparent;
+color: #ecc188;
+}
+#menue1 a:hover {
+background-color: transparent;
+color: #fff;
+}
+
+#menue2 ul#menu2 li a, 
+#menue2 ul#menu2a li a, 
+#menue3 ul#menu3 li a {
+background-image: url(../images/bullet.jpg);
+background-repeat: no-repeat;
+padding-left: 20px;
+background-color: transparent;
+color: #ecc188;
+}
+#menue2 ul#menu2 li a:hover, 
+#menue2 ul#menu2a li a:hover, 
+#menue3 ul#menu3 li a:hover {
+background-image: url(../images/bullet2.jpg);
+background-repeat: no-repeat;
+background-color: transparent;
+color: #fff;
+}
+
+
+/* Formatierung fuer aktiven Link 
+	(Diese Formatierung wird per PHP automatisch 
+	dem gerade aktiven Link zugewiesen) */
+
+#menue2 ul#menu2 li a.aktiv {
+background-image: url(../images/bullet2.jpg);
+background-repeat: no-repeat;
+background-color: transparent;
+color: #fff;
+cursor: default;
+}
+
+
+/* === TEXT-FORMATE === */
+
+
+/*chat*/
+
+#chat {background-image: url(../images/chathigru.png);
+background-repeat: no-repeat;
+background-color: transparent;
+color: #fff;
+cursor: default;
+}
+
+/* Headings
+	(H1 ist reserviert fuer Text-Logo im 'Header') */
+h2,
+h3 {
+padding: 20px 0 10px 60px;
+background-color: transparent;
+color: #ecc188;
+font-style: italic;
+font-weight: normal;
+}
+h4#erste-h4,
+h4#zweite-h4 {
+padding: 20px 0px 10px 60px;
+font-style: italic;
+letter-spacing: 1pt;
+background-color: transparent;
+color: #ecc188;
+}
+
+/* Text allgemein */
+p, li {
+font-size: 80%;
+}
+#content p {
+line-height: 150%;
+margin: 15px 0;
+}
+
+
+/* Textbloecke im Content */
+#content p.text1 {
+font-weight: bold;
+}
+#content p.text1,
+#content p.text2,
+#content p.text3,
+#content p.text4,
+#content p.text5,
+#content p.text6,
+#content p.text7 {
+padding: 0 40px 0 60px;
+}
+
+
+/* Copyright-Tabelle */
+#content table#copyright {
+border: 0 none;
+margin: 10px 0 0 60px;
+}
+#content table#copyright td {
+border: 1px dotted #454545;
+padding: 5px 10px;
+}
+
+
+/* Absaetze in Tabelle */
+#content table#copyright td p {
+margin: 0;
+padding: 0;
+}
+
+
+
+/* IMAGES */
+img {
+border: 0 none;
+}
+
+#bild1,
+#bild2,
+#bild3 {
+/* kann beliebig ersetzt werden */
+
+float: right;
+background-image: url(../images/corner.jpg);
+background-repeat: no-repeat;
+width: 88px;
+height: 88px;
+margin: 20px 20px 10px 20px;
+}
+
+
+/*==============================*/
+/* DIVERSES */
+
+
+/* Seitenanfang Sprungmarken */
+#content #topper-1,
+#content #topper-2 {
+background-image: url(../images/up.jpg);
+background-repeat: no-repeat;
+margin: 20px 20px 0 10px;
+padding-left: 20px;
+border-bottom: 1px solid #a76b1b;
+}
+#content #topper {
+background-image: url(../images/up.jpg);
+background-repeat: no-repeat;
+margin: 30px 20px 20px 10px;
+padding-left: 20px;
+border-bottom: 3px double #a76b1b;
+}
+
+#content #topper-3 {
+display: none;
+}
+
+
+/* unsichtbare Elemente */
+
+.invis, hr {
+display: none;
+}
+
+
+/* Initialen fuer '#content p' */
+
+#content p span.initial {
+font-size: 150%;
+font-style: italic;
+padding-right: 2px;
+background-color: transparent;
+color: #ecc188;
+}
+#content p.text1 span.initial {
+font-weight: normal;
+}

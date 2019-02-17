@@ -1,0 +1,184 @@
+body {
+	background-color: black;
+	background-image: url("../img/2.jpg");
+}
+
+button {
+	padding: 0;
+	border: none;
+	background: none;
+}
+
+.atttabelle tr {
+	height: 50px;
+}
+
+.namefield {
+	height: 8%;
+	margin-left: 35%;
+	margin-right: 35%;
+	background-color: rgba(0,0,0,0.6);
+}
+
+.fraktionsbereich {
+	float: left;
+	width: 47%;
+	height: 32%;
+	padding: 1%;
+}
+
+.faehigkeitsbereich {
+	float: right;
+	width: 37%;
+	height: 75%;
+	padding: 1%;
+}
+
+.attributsbereich {
+	clear: left;
+	width: 47%;
+	height: 45%;
+	padding: 1%;
+}
+
+.faehigkeiten {
+	height: 95%;
+}
+
+.startbereich {
+	height: 5%;
+	float: right;
+}
+
+.standardschrift {
+	font-size: 20px;
+	color: #BBBBFF;
+}
+
+.attributsschrift {
+	font-size: 30px;
+	font-family: fantasy;
+	color: #BBBBFF;
+	padding-right: 100px;
+}
+
+.skillschrift {
+	font-size: 25px;
+	font-family: fantasy;
+	color: #BBBBFF;
+	padding-right: 100px;
+}
+
+.nameinput {
+	font-size: 30px;
+	color: #EEB330;
+	background: transparent;
+	text-align: center;
+	border-color: #BBBBFF;
+	margin-left: 20px;
+}
+
+.fraktionsname {
+	font-size: 25px;
+	color: #BBBBFF;
+	font-family: fantasy;
+}
+
+.fraktionsinfo {
+	font-size: 20px;
+	color: #BBBBFF;
+}
+
+.fraktionstabelle {
+	float: left;
+	width: 50%;
+}
+
+.infocell {
+	float: right;
+	border-top-color: #9999FF;
+	border-right-color: #CCCCFF;
+	border-bottom-color: #CCCCFF;
+	border-left-color: #9999FF;
+	border-width: 2px;
+	border-style: solid;
+	width: 40%;
+	height: 100%;
+	margin-left: 8%;
+	background-color: rgba(0,0,0,0.6);
+}
+
+.restpunkteatt {
+	font-size: 20px;
+	padding-left: 80%;
+	color: #BBBBFF;
+	height: 10%;
+	width: 20%;
+}
+
+.restpunkteskill {
+	font-size: 20px;
+	padding-left: 70%;
+	color: #BBBBFF;
+	width: 30%;
+}
+
+.attribute {
+	height: 80%;
+	width: 100%;
+	padding: 2%;
+	padding-left: 20%;
+}
+
+.counter {
+	font-size: 30px;
+	color: white;
+	padding-left: 10px;
+}
+
+.counter2 {
+	font-size: 30px;
+	color: white;
+	padding-left: 10px;
+}
+
+.attwert {
+	font-size: 30px;
+	color: white;
+	padding-left: 40px;
+	padding-right: 40px;
+	float: right;
+}
+
+.startbutton {
+	background-color: #50DF50;
+	border: none;
+	color: black;
+	font-size: 25px;
+	padding: 4px 20px;
+	opacity: 0.6;
+}
+
+.attbuttonlinks  img{
+	height: 35px;
+	width: 35px;
+}
+
+.attbuttonrechts  img{
+	height: 35px;
+	width: 35px;
+}
+
+.skillbuttonlinks  img{
+	height: 35px;
+	width: 35px;
+}
+
+.skillbuttonrechts  img{
+	height: 35px;
+	width: 35px;
+}
+
+.spacetr {
+	height: 10px;
+}
