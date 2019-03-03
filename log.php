@@ -1,4 +1,6 @@
 <?php
+/* Session starten oder wieder aufnehmen*/
+session_start();
 /* Vorherige Session zerstören*/
 session_destroy();
 /* Session starten oder wieder aufnehmen*/
@@ -21,33 +23,33 @@ if (isset($_POST["Mailadresse"]))
 	
 /*ÜBergebe die Formulavariable Mailadresse: */	
 $fmail=$_POST["Mailadresse"];
-echo $fmail;
+//echo $fmail;
 
 /*ÜBergebe die Formularvariable Passwort: */
 
 $fpw=$_POST["Password"];
-echo $fpw;
+//echo $fpw;
 
 /* Suche in der Datenbank die Mailadresse heraus: */
 $abfrage = "SELECT * FROM  user_daten WHERE usr_mail LIKE '$fmail' ";
 $ergebnis = mysql_query($abfrage);
 $daten = mysql_fetch_array($ergebnis);
-echo $daten["usr_mail"]; 
+//echo $daten["usr_mail"]; 
 $dbmail=$daten["usr_mail"];
 $dbpw=$daten["usr_pw"];
 $dbsalt=$daten["usr_salt"];
 
-echo $abfrage; 
+//echo $abfrage; 
 
 
 /*Verschlüssele das PAsswort mit md5*/
 $fpw=$dbsalt.$fpw.$pepper;
 $fpw=md5($fpw);
-echo $fpw;
+//echo $fpw;
 /* Vergleiche die Passwörter miteinander*/
 If ($dbpw==$fpw)
 {
-	echo "JUHU!";
+//	echo "JUHU!";
 /*Lege die Session-Variablen fest: */
 	
 $_SESSION["mail"]= $dbmail;
@@ -98,7 +100,7 @@ else
 else
 {echo "Leider waren deine Angaben nicht korrekt. <br>";
 echo $_POST["Mailadresse"]." ".$_POST["Password"];
-//echo "<a href=\"http://www.aron.games/logout.php?".session_name()."\"> Session löschen</a>\n";
+echo "<a href=\"http://www.aron.games/logout.php?".session_name()."\"> Session löschen</a>\n";
 }
 
 

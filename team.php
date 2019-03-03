@@ -1,20 +1,25 @@
 <?php
 Echo"
-<div id=\"container1\">
+<div class=\"container1\">
 Das Spiel \" Aron - a realm of nebulae\" basiert auf einer Rollenspielidee von Kuldigar. <br>
 
 In der Umsetzung mitgeholfen haben: <br>
 
-<ul>
-<li>Aiy - Bug Hunter | Test | Concept | Story</li>
-<li>Berenger - Grafiken | Balancing | Concept | Story </li>
-<li>Eule mit Tasche -  Grafiken | DB | Programmierung | Projektkoordinierung </li>
-<li>Kuldigar -  Story | Legal | Concept |Balancing |Programmierung</li>
-<li>Phorus -  Programmierung | Balancing | Architecture | Story | Testframework </li>
-<li>Orly -  Programmierung | Grafik | Story </li>
-</ul>
 
-<p>Orte der Programmierung: </p>
+<p id=\"team\">
+<h1>Aiy</h1> - Bug Hunter | Test | Concept | Story</p>
+<p id=\"team\">
+<h1>BenMic</h1> -  Story | Legal | Concept |Balancing |Programmierung</p>
+<p id=\"team\">
+<h1>Berelina </h1>- <div id=\"teamtitel\">\"Formelfee\" </div>-  Programmierung | Grafik | Story </p>
+<p id=\"team\">
+<h1>Berenger</h1> - Grafiken | Balancing | Concept | Story </p>
+<p id=\"team\">
+<h1>Eule mit Tasche</h1> - <div id=\"teamtitel\">\"Die Eulmächtige\" <div> Grafiken | DB | Programmierung | Projektkoordination </p>
+<p id=\"team\">
+<h1>Phorusrhacos</h1> -  Programmierung | Balancing | Architecture | Story | Testframework</p>
+
+<p id=\"proglocals\">Orte der Programmierung: </p>
 </div>
 
 "; 
