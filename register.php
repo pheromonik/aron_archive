@@ -9,7 +9,11 @@ include 'header.html';
 
 echo "  <html> <body>
 <p>
-					 <form action='index.php?section=reg' method='post' autocomplete='off'>
+					 <form action='index.php?section=reg' method='post' autocomplete='off'
+                     onsubmit=\"if(this.Password.value != this.Password.value)
+                {alert('Passworteingabe unterscheidet sich!');\" 
+                 return false;}
+                     >
 
     <fieldset>
         <legend>Registriere dich:</legend>

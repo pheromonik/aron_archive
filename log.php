@@ -1,6 +1,4 @@
 <?php
-/* Session starten oder wieder aufnehmen*/
-session_start();
 /* Vorherige Session zerstören*/
 session_destroy();
 /* Session starten oder wieder aufnehmen*/
@@ -39,17 +37,18 @@ $dbmail=$daten["usr_mail"];
 $dbpw=$daten["usr_pw"];
 $dbsalt=$daten["usr_salt"];
 
-//echo $abfrage; 
-
+echo $abfrage; 
+echo " Saz: ".$dbsalt." Pfeffer:".$pepper;
 
 /*Verschlüssele das PAsswort mit md5*/
 $fpw=$dbsalt.$fpw.$pepper;
 $fpw=md5($fpw);
-//echo $fpw;
+echo "salz, pw, pfeffer:".$fpw;
+
 /* Vergleiche die Passwörter miteinander*/
 If ($dbpw==$fpw)
 {
-//	echo "JUHU!";
+	echo "JUHU!";
 /*Lege die Session-Variablen fest: */
 	
 $_SESSION["mail"]= $dbmail;

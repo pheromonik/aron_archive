@@ -3,8 +3,6 @@ body {
 	background-image: url("../img/2.jpg");
 }
 
-
-
 button {
 	padding: 0;
 	border: none;
@@ -89,6 +87,10 @@ button {
 .fraktionsinfo {
 	font-size: 20px;
 	color: #BBBBFF;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0);
+	border-color: rgba(0,0,0,0);
 }
 
 .fraktionstabelle {
@@ -136,20 +138,18 @@ button {
 	font-size: 30px;
 	color: white;
 	padding-left: 10px;
-}
-
-.counter2 {
-	font-size: 30px;
-	color: white;
-	padding-left: 10px;
+	background-color: rgba(0,0,0,0);
+	border-color: rgba(0,0,0,0);
+	text-align: center;
 }
 
 .attwert {
 	font-size: 30px;
 	color: white;
-	padding-left: 40px;
-	padding-right: 40px;
 	float: right;
+	background-color: rgba(0,0,0,0);
+	border-color: rgba(0,0,0,0);
+	text-align: center;
 }
 
 .startbutton {
@@ -183,30 +183,4 @@ button {
 
 .spacetr {
 	height: 10px;
-}
-
-/*Außerhalb des Spieles*/
-body#corpus {
-background-image: url(../img/background.jpg);
-background-position:center top;
-background-repeat:no-repeat;
-background-size: cover;
-font-family: Verdana, Helvetica, Arial, sans-serif;
-font-size: 100.01%;
-text-align: center;
-padding: 10px 0 20px 0;
-background-color: #000000;
-color: #fff;
-overflow:visible;
-display: flex;
-flex-direction:column;
-}
-
-#team{
-padding: 4px; 
-background: lavenderblush; 
-width:75%;
-color: white; 
-border-top: 8px solid white; 
-border-bottom: 3px solid white;
 }

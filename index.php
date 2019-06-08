@@ -18,7 +18,7 @@ $section['impressum'] ='impressum.php';
 $section['FAQ'] ='FAQ.php';
 $section['regeln'] ='regeln.php';
 $section['AGB'] ='AGB.php';
-$section['team'] ='team.php';
+$section['team'] ='team.html';
 //der HTML-Header wird geladen
 
 include 'header.html'; // doctype, <html> und das komplette <head>-element

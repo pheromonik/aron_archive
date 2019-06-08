@@ -1,4 +1,5 @@
 <?php
+session_destroy();
 /* Session starten oder wieder aufnehmen*/
 session_start(); 
 
@@ -19,20 +20,14 @@ echo $uid;
 
 $section = array();
 $section['hangar'] = 'hangar.php';
-
 $section['bank'] = 'bank.php';
-
 $section['reg'] = 'reg.php';
-
 $section['charcrea'] = 'characreation.php';
-
 $section['validateEmail'] = 'validate.php';
-
 $section['shop'] ='shop.php';
-
 $section['info'] ='info.php';
-
 $section['ship'] ='ship.php';
+$section['message']='message.php';
 
 /*Hier wird abgefragt: 
 1. ist die Section im Array vorhanden, die angesprochen wurde
@@ -48,16 +43,26 @@ $sql = "SELECT * FROM `char_daten` WHERE `user_id`= $uid";
 $res= mysql_query($sql);
 $num= mysql_num_rows($res);
 
-echo "Es sind ".$num." Datensätze vorhanden."; 
+//echo "Es sind ".$num." Datensätze vorhanden."; 
 
 //Wenn ja, dann: 
 if ($num>0)
 {
 if (isset($_GET['section'], $section[$_GET['section']])) 
 {
+    include 'header.html'; 
+
+echo "<body id=\"inplay\">";
+echo "<main>";
     include $section[$_GET['section']];
 } else 
 {
+
+/*Übernahme des Designs*/
+include 'header.html'; 
+
+echo "<body id=\"inplay\">";
+echo "<main>";
     include $section['hangar'];
 }
 }
@@ -68,13 +73,8 @@ else if ($num==0)
 include $section['charcrea'];
 }
 
-/*Übernahme des Designs*/
-include 'header.html'; 
 
-echo "<body id=\"inplay\">";
-echo "<main>";
-echo "Mailadresse: ".$_SESSION["mail"]."Passwort:  ".$_SESSION["pw"]. " SessionID: ".$_SESSION["id"]." Status: ".  
-$_SESSION["status"];
+
 echo "</main>";
 echo "</body>";
 
