@@ -43,7 +43,7 @@ $Fehler=1;
 }
 
 //Datenbank nach Usernamen durchsuchen
-$Sqlab = "SELECT * FROM `user_daten` WHERE `usr_mail` LIKE '$Name'"; 
+$Sqlab = "SELECT * FROM `user_daten` WHERE `usr_name` LIKE '$Name'"; 
 $result = mysql_query( $Sqlab);
 $res=mysql_query($Sqlab);
 $numname= mysql_num_rows($res);

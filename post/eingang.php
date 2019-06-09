@@ -52,7 +52,8 @@ $sql = "DELETE FROM `message` WHERE `message`.`pn_id` = $pnid";
 If(empty($daten["empf_id"]))
 {
 echo "<p class=\"standardschrift\">Du hast keine Nachrichten in deinem Posteingang.</p><br>
-<a href=\"href=\"http://www.aron.games/message.php?section=pneu\"> Neue Nachricht verfassen</a>";
+<a href=\"http://www.aron.games/message.php?section=pneu\"> Neue Nachricht verfassen</a>";
+
 }
 else
 //Wenn Nachrichten vorhanden sind: 

@@ -107,7 +107,7 @@ $SQLLAB="INSERT INTO `char_daten`(
     `Wirk5_Ueberz`)
 VALUES(
     NULL,
-    '1',
+    '$uid',
     '$name',
     '1',
     '$fraktion',

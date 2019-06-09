@@ -1,17 +1,11 @@
-<?php
-/* Vorherige Session zerstören*/
-session_destroy();
+﻿<?php
 /* Session starten oder wieder aufnehmen*/
 session_start(); 
 
-/* Säubern des Session-Arrays*/
-$_SESSION = array();
-
 /* Bei einem Aufruf von der Login-Seite: */
 include_once 'includes/dbconnect.inc.php';
-
-//Binde das Pepper ein...
 include_once 'includes/area51.inc.php';
+
 
 if (isset($_POST["Mailadresse"]))
 {
@@ -21,30 +15,29 @@ if (isset($_POST["Mailadresse"]))
 	
 /*ÜBergebe die Formulavariable Mailadresse: */	
 $fmail=$_POST["Mailadresse"];
-//echo $fmail;
+echo $fmail;
 
 /*ÜBergebe die Formularvariable Passwort: */
 
 $fpw=$_POST["Password"];
-//echo $fpw;
+echo $fpw;
 
 /* Suche in der Datenbank die Mailadresse heraus: */
 $abfrage = "SELECT * FROM  user_daten WHERE usr_mail LIKE '$fmail' ";
 $ergebnis = mysql_query($abfrage);
 $daten = mysql_fetch_array($ergebnis);
-//echo $daten["usr_mail"]; 
+echo $daten["usr_mail"]; 
 $dbmail=$daten["usr_mail"];
 $dbpw=$daten["usr_pw"];
 $dbsalt=$daten["usr_salt"];
 
 echo $abfrage; 
-echo " Saz: ".$dbsalt." Pfeffer:".$pepper;
 
-/*Verschlüssele das PAsswort mit md5*/
+
+/*Verschlüssele das Passwort mit md5*/
 $fpw=$dbsalt.$fpw.$pepper;
 $fpw=md5($fpw);
-echo "salz, pw, pfeffer:".$fpw;
-
+echo $fpw;
 /* Vergleiche die Passwörter miteinander*/
 If ($dbpw==$fpw)
 {
@@ -99,7 +92,7 @@ else
 else
 {echo "Leider waren deine Angaben nicht korrekt. <br>";
 echo $_POST["Mailadresse"]." ".$_POST["Password"];
-echo "<a href=\"http://www.aron.games/logout.php?".session_name()."\"> Session löschen</a>\n";
+//echo "<a href=\"http://www.aron.games/logout.php?".session_name()."\"> Session löschen</a>\n";
 }
 
 
