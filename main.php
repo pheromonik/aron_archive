@@ -28,7 +28,7 @@ $section['shop'] ='shop.php';
 $section['info'] ='info.php';
 $section['ship'] ='ship.php';
 $section['message']='message.php';
-$section['admintool']='admin/index.php';
+$section['admintool']='/admin/index.php';
 
 /*Hier wird abgefragt: 
 1. ist die Section im Array vorhanden, die angesprochen wurde
@@ -62,6 +62,7 @@ echo "<main>";
 /*Übernahme des Designs*/
 include 'header.html'; 
 
+
 echo "<body id=\"inplay\">";
 echo "<main>";
     include $section['hangar'];
@@ -75,7 +76,7 @@ include $section['charcrea'];
 }
 
 
-
+include 'includes/innermenue.inc.php';
 echo "</main>";
 echo "</body>";
 

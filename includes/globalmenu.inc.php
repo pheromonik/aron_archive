@@ -21,4 +21,15 @@ echo "
 <a href=\"/admin\" border=0>Admintool</a><br>
 ";
 }
+
+//Abfrage nach dem aktuellen Guthaben des Charakters
+$abfrage = "SELECT * FROM  char_daten WHERE user_id = '$uid'";
+$ergebnis = mysql_query($abfrage);
+
+$daten = mysql_fetch_array($ergebnis);
+$guthaben=$daten["credits"];
+
+echo "<p class='standardschrift'>Aktuelles Guthaben:".$guthaben."</p>";
+
+
 ?>
