@@ -8,6 +8,7 @@ echo "<p class='standardschrift'> Aktionsoptionen:
 <ul>Kredit aufnehmen</ul>
 <ul>Geld einzahlen</ul>
 <ul>Geld abheben</ul>
+<ul> Pseudo</ul>
 </list>";
 
 
