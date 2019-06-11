@@ -3,10 +3,10 @@
 <meta charset="UTF-8">
 
 <style>
-      body { font-family: Helvetica;
-color: darkgrey;	  }
+body { font-family: Helvetica;
+color: white;	  }
 	     
-		 #flexContainer {
+ #flexContainer {
 		 
       display: flex;
       flex-direction: row;
@@ -14,35 +14,50 @@ color: darkgrey;	  }
 	  justify-content:center; 
 	  align-items: stretch;
 	  align-content: stretch;
-	  background: black;
 	  color: black;
 	  
    }
    .fbox {
-   height:350 px;
-   width: 27%;
-   padding: 10px; 
-   padding-bottom: 20px;
-   margin: 2px;
-   background: lavenderblush; 
-   opacity: 0.9;
-      border: 1px solid #5f73b3; 
+    height:400 px;
+    width: 27%;
+    padding: 10px; 
+    padding-bottom: 20px;
+    margin: 2px;
+    background: lavenderblush; 
+    opacity: 0.9;
+    border: 2px solid #5f73b3; 
+    filter: brightness 1.5
+            drop-shadow(8px 8px 10px white);
 	background-image:url(../img/monitor.jpg);
 
    align-content: stretch;
    border-radius : 10px 25% 10px;
 
    justify-content: space-between;}
-   .kontakt{
+
+   .kontakt {
    font-style: italic;
-   color: darkgrey;}
-   .class{font-style: italic}
-   .teamtitel{color: black;}
-  
+   color: black;
+    font-size: large;}
+
+   .pre {
+       font-style: italic;
+       color: white;
+        font-size: large;
+       }
+
+   .teamtitel {
+    font-variant: small-caps;
+    color: black;
+     font-size: large;
+    }
+  a {
+      color: black;
+  }
    </style>
 </head>
 <body>
-<div id="pre">
+<div class="pre">
 Das Spiel " Aron - a realm of nebulae" basiert auf einer Rollenspielidee von BenMic. <br>
 
 In der Umsetzung mitgeholfen haben: </div>
@@ -50,18 +65,19 @@ In der Umsetzung mitgeholfen haben: </div>
 <div id="flexContainer">
 
 <p><div class="fbox">
-<h1>Aiy</h1> </br> <div id=\"teamtitel\">Bughunter</div> <div class="kontakt"><a href="mailto:aiygenartig@aron.games"> Email</a></div><br> Bug Hunter | Test | Concept | Story</div></p>
+<h1>Aiy</h1> </br> <div class="teamtitel">Bughunter</div> <div class="kontakt"><a href="mailto:aiygenartig@aron.games"> Email</a></div><br> Bug Hunter | Test | Concept | Story</div></p>
 <p><div class="fbox">
-<h1>BenMic</h1> </br><div id=\"teamtitel\">Waage der Gerechtigkeit</div> <div class="kontakt"><a href="mailto:benmic@aron.games"> Email</a></div><br> -  Story | Legal | Concept |Balancing |Programmierung</div></p>
+<h1>BenMic</h1> </br><div class="teamtitel">Waage der Gerechtigkeit</div> <div class="kontakt"><a href="mailto:benmic@aron.games"> Email</a></div><br> -  Story | Legal | Concept |Balancing |Programmierung</div></p>
 <p><div class="fbox">
-<h1>Berelina </h1>- <div id=\"teamtitel\">Formelfee</div> <div class="kontakt"><a href="mailto:berelina@aron.games">Email</a></div>Programmierung | Grafik | Story</div> </p>
+<h1>Berelina </h1>- <div class="teamtitel">Formelfee</div> <div class="kontakt"><a href="mailto:berelina@aron.games">Email</a></div>Programmierung | Grafik | Story</div> </p>
 <p><div class="fbox">
-<h1>Berenger</h1> </br> <div id=\"teamtitel\">Bedenkenträger</div> <div class="kontakt"><a href="mailto:berenger@aron.games">Email</a> </div>- Grafiken | Balancing | Concept | Story</div> </p>
+<h1>Berenger</h1> </br> <div class="teamtitel">Bedenkenträger</div> <div class="kontakt"><a href="mailto:berenger@aron.games">Email</a> </div>Grafiken | Balancing | Concept | Story</div> </p>
 <p><div class="fbox">
-<h1>Eule mit Tasche</h1> </br><div id=\"teamtitel\">Die Eulmächtige</div><div class="kontakt"><a href="mailto:emt@aron.games">Email</a></div> Grafiken | DB | Programmierung | Projektkoordination </div></p>
+<h1>Eule mit Tasche</h1> </br><div class="teamtitel">Die Eulmächtige</div><div class="kontakt"><a href="mailto:emt@aron.games">Email</a></div> Grafiken | DB | Programmierung | Projektkoordination </div></p>
 <p><div class="fbox">
-<h1>Phorusrhacos</h1> </br><div id=\"teamtitel\">Bugfactory</div><div class="kontakt"><a href="mailto:phorusrhacos@aron.games">Email</a></div>  -  Programmierung | Balancing | Architecture | Story | Testframework</div></p>
-</div>
+<h1>Phorusrhacos</h1> </br><div class="teamtitel">Bugfactory</div><div class="kontakt"><a href="mailto:phorusrhacos@aron.games">Email</a></div>  Programmierung | Balancing | Architecture | Story | Testframework</div></p>
+<p><div class="fbox">
+<h1>Wulfried</h1> </br> <div class="teamtitel">Der Unsichtbare</div> <div class="kontakt"><a href="mailto:wulfried@aron.games">Email</a> </div>Programmierung | DB | Backend </div></p>
 <p id=\"proglocals\">Orte der Programmierung: </p>
 
 </body>
