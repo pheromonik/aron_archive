@@ -1,24 +1,44 @@
 <?php 
   class Asqlwrapper {
     private $tableName;
+    private $connection;
+    private $servername;
+    private $username;
+    private $password;
+    private $dbname;    
     
-    public function __construct($nOfTable) {
+    public function __construct($nOfTable, $sname = "mysql.webhosting61.1blu.de", $uname = "s186687_2828146", $pw = "q8os(DmEwoxIM#n", $db = "db186687x2828146") {
       $this->tableName=$nOfTable;
+      $this->servername=$sname;
+      $this->username=$uname;
+      $this->password=$pw;
+      $this->dbname=$db;
+      $this->connection = mysqli_connect($this->servername, $this->username, $this->password, $this->dbname);
+      if (!$this->connection) {
+        echo "Could not connect to database"; 
+        die("Connection failed: " . mysqli_connect_error());
+      }      
     }
     public function __destruct() {
+      if ($this->connection) {
+        $this->connection->close();
+      }
     }
     
     public function GetValue($testName, $testValue, $returnField) {
-      $daten=$this->GetRow($testName, $testValue);
-      if (empty($daten))
+      $abfrage="SELECT $returnField FROM  $this->tableName WHERE $testName LIKE '$testValue'";
+      $daten=$this->connection->query($abfrage);
+      if ($daten->num_rows > 0) {
+        return $daten->fetch_assoc()["$returnField"];
+      }
+      else {
         return NULL;
-      else
-        return $daten["$returnField"];
+        }
     }
     
-    public function GetRow($testName, $testValue) {
+    /*public function GetRow($testName, $testValue) {
       $abfrage = "SELECT * FROM  $this->tableName WHERE $testName LIKE '$testValue'";
-      $ergebnis = mysql_query($abfrage);
+      $ergebnis = mysqli_query($abfrage);
       $daten = mysql_fetch_array($ergebnis);
       return $daten;
     }
@@ -42,18 +62,19 @@
       $valuesString=implode(",",$values);
       $fieldNamesString=implode(",",$fieldNameValues);
       $Sqlab = "INSERT INTO $this->tableName ($fieldNamesString) VALUES ($valuesString)";
-      return mysql_query($Sqlab);
+      return mysqli_query($Sqlab);
     }
-//     "UPDATE user_daten SET message_ids='$message_ids' WHERE usr_index = '$empfi'";
+  //     "UPDATE user_daten SET message_ids='$message_ids' WHERE usr_index = '$empfi'";
     public function ReplaceEntry($testName, $testValue, $updateFieldName, $updateFieldValue) {
-//       $value=$this->GetValue($testName, $testValue, $updateFieldName);
+  //       $value=$this->GetValue($testName, $testValue, $updateFieldName);
       $aendern = "UPDATE $this->tableName SET $updateFieldName='$updateFieldValue' WHERE $testName = '$testValue'";
-      mysql_query($aendern);
+      mysqli_query($aendern);
     }
     
     public function RemoveEntry($testName, $testValue, $updateFieldName) {
       $this->Update($testName, $testValue, $updateFieldName, "");
     }
+    */ 
   }
   
 
@@ -62,7 +83,7 @@
 //   $message_ids=array("inbox"=>array($pn_id));
 //   $message_ids=json_encode($message_ids);
 //   $aendern = "UPDATE user_daten SET message_ids='$message_ids' WHERE usr_index = '$empfi'";
-//   mysql_query($aendern);
+//   mysqli_query($aendern);
 // }
 // else
 // {
@@ -70,6 +91,6 @@
 //   $postbox["inbox"][count($postbox["inbox"])]="$pn_id";
 //   $postbox=json_encode($postbox);
 //   $aendern = "UPDATE user_daten SET message_ids='$message_ids' WHERE usr_index = '$empfi'";
-//   mysql_query($aendern);
+//   mysqli_query($aendern);
 // }
 ?>
