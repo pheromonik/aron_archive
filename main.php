@@ -1,7 +1,5 @@
 <?php
-session_destroy();
-/* Session starten oder wieder aufnehmen*/
-session_start(); 
+session_start(); //SESSION STARTEN ODER WIEDER AUFNEHMEN
 
 /* Es sollen alle Fehler mit Fehlermeldung ausgegeben werden! */
 error_reporting(E_ALL);
@@ -14,7 +12,7 @@ include 'includes/dbconnect.inc.php';
 
 $uid=$_SESSION["id"];
 
-echo $uid;
+//echo $uid;
 /* Hier werden die einzelnen Sections der Mainpage angegeben*/
 
 
@@ -55,6 +53,7 @@ if (isset($_GET['section'], $section[$_GET['section']]))
 
 echo "<body id=\"inplay\">";
 echo "<main>";
+include 'includes/globalmenu.inc.php';
     include $section[$_GET['section']];
 } else 
 {
@@ -64,7 +63,9 @@ include 'header.html';
 
 
 echo "<body id=\"inplay\">";
+
 echo "<main>";
+include 'includes/globalmenu.inc.php';
     include $section['hangar'];
 }
 }

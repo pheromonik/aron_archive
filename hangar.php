@@ -1,6 +1,5 @@
 <?php
 
-include 'includes/globalmenu.inc.php';
 //Abfrage Daten Charakter
 $uid=$_SESSION["id"];
 $abfrage = "SELECT * FROM  char_daten WHERE user_id = '$uid' ";
