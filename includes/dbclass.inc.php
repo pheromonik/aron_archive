@@ -17,5 +17,16 @@
       else
         return $daten["$returnField"];
     }
+    
+    public function Entry($fieldNames,$values) {
+      foreach ($values as $entry => $value) {
+        if (gettype($value)="array") {
+          $value=json_encode($value);
+          $values[$entry]=$value;
+        }
+      }
+      $Sqlab = "INSERT INTO $this->tableName $fieldNames VALUES $values";
+      return mysql_query($Sqlab);
+    }
   }
 ?>
