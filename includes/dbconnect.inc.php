@@ -4,6 +4,7 @@
   mysql_select_db("db186687x2828146") or die
   ("Die Datenbank existiert nicht");
   
-  require_once "includes/dbclass.inc.php";
+  //FILE points to the directory of this file
+  include_once(dirname(__FILE__)."/dbclass.inc.php");
   
 ?>
